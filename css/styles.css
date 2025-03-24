@@ -109,6 +109,7 @@ table {
     width: 100%;
     margin-top: 20px;
     border-collapse: collapse;
+    white-space: nowrap;
 }
 
 table caption {
@@ -188,5 +189,43 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
 
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section h3 {
+        font-size: 1.3em;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+    }
+}
 
