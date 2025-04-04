@@ -15,14 +15,19 @@
     </header>
     
     <nav>
-        <a href="coverletter.html">Cover Letter</a>
-        <a href="goals.html">Goals</a>
+        <nav>
+            <ul>
+                <li><a href="coverletter.html">Cover Letter</a></li>
+                <li><a href="goals.html">Goals</a></li>
+            </ul>
+        </nav>
+        
     </nav>
     
-    <main>
+    <main id="resume_content">
         <section>
-            <h2>Objective</h2>
-            <p><span>Aspiring Software Engineer</span> with expertise in <strong>Java, Python, JavaScript, and SQL</strong>. Passionate about <mark>building scalable applications</mark> and solving complex technical challenges.</p>
+            <h2 class="objective">Objective</h2>
+            <p><span>Aspiring Software Engineer</span> with <strong>Java, Python, JavaScript, and SQL</strong> expertise. Passionate about <mark>building scalable applications</mark> and solving complex technical challenges.</p>
             <br>
         </section>
         
@@ -31,13 +36,13 @@
             <h2>Education</h2>
             <article>
                 <h3>Degrees & Certifications:</h3>
-                <p><strong>B.S. in Software Engineering</strong> - Western Governors University (Expected 2027)</p>
-                <p><strong>Java Development Program</strong> - Merit America (2023-2024)</p>
+                <p><strong>B.S. in Software Engineering</strong> - <a href="https://www.wgu.edu/" target="_blank">Western Governors University</a> (Expected 2027) (WGU, 2024)</p>
+                <p><strong>Java Development Program</strong> - <a href="https://meritamerica.org" target="_blank">Merit America</a> (2023-2024) (Merit America, 2024)</p>
                 <br>
                 <h3>Certifications:</h3>
                 <ul>
-                    <li><strong>Introduction to Java -</strong> <em>Sololearn (2023)</em></li>
-                    <li><strong>Programming with JavaScript -</strong> <em>Coursera (2024)</em></li>
+                    <li><strong>Introduction to Java -</strong> <em><a href="https://www.sololearn.com/en/" target="blank">Sololearn</a> (2023) (Sololearn, 2023)</em></li>
+                    <li><strong>Programming with JavaScript -</strong> <em><a href="https://www.coursera.org" target="_blank">Coursera</a> (2023) (Coursera, 2023)</em></li>
                 </ul>
             </article>
             <br>
@@ -114,17 +119,28 @@
     </main>
     
     <footer>
+        <h2>References:</h2>
+        <ul>
+            <li>Merit America. (2024). *Java Development Program*. Merit America. <a href="https://meritamerica.org/" target="_blank">https://meritamerica.org/</a></li>
+            <li>Western Governors University (WGU). (2024). *B.S. in Software Engineering*. Western Governors University. <a href="https://www.wgu.edu" target="_blank">https://www.wgu.edu</a></li>
+            <li>Sololearn. (2023). *Introduction to Java*. Sololearn. <a href="https://www.sololearn.com/en/" target="_blank">https://www.sololearn.com/en/</a></li>
+            <li>Coursera. (2023). *Programming with JavaScript*. Coursera. <a href="https://www.coursera.org" target="_blank">https://www.coursera.org</a></li>
+        </ul>
+
         <p><a href="mailto:jontaehall2730@gmail.com">jontaehall2730@gmail.com</a></p>
         <p><a href="tel:313-293-1720">Phone: 313-293-1720</a></p>
         <p><a href="https://www.linkedin.com/in/jontae-hall/" target="_blank">My LinkedIn</a></p>
         <p><a href="https://github.com/JontaeHall" target="_blank">My GitHub</a></p>
+        <div id="date-container"></div>
     </footer>
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const dateDiv = document.createElement('div');
+            const dateDiv = document.getElementById('date-container');
             dateDiv.textContent = `Current Date: ${new Date().toLocaleDateString()}`;
-            document.body.appendChild(dateDiv);
+
+            // Message for the console
+            console.log("Resume page loaded successfully!");
         });
     </script>
 </body>
