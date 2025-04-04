@@ -1,39 +1,45 @@
-/* Universal Reset for margin and padding */
+/* Universal for margin and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Root */
+:root {
+    --primary-color: #333;
+    --secondary-color: #007BFF;
+    --background-light: #f4f4f4;
+    --text-dark: #222;
+    --text-light: #555;
+    --accent-color: #29a9e8;
+}
+
+/* Body Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif , sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-light);
+    color: var(--text-dark);
     padding: 20px;
 }
 
-span {
-    font-family: Arial, Helvetica, sans-serif;
-    color: darkblue;
-    font-weight: bold;
-}
-
-/* Header styling */
+/* Header Styling */
 header {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 20px;
+    border-radius: 8px;
 }
 
 header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
-header  span {
-    color: #29a9e8; /* Tomato color */
+
+header span {
+    color: var(--accent-color);
     font-weight: bold;
     font-size: 1.2em;
 }
@@ -47,13 +53,17 @@ header nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 1.1em;
+    transition: color 0.3s ease;
 }
 
 header nav a:hover {
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
-/* Main section styling */
+
+
+/* Main Section Styling */
 main {
     background-color: #fff;
     padding: 40px;
@@ -62,6 +72,35 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Id Selector Styling */
+#resume_content {
+    background: white;
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#main_cover {
+    max-width: 800px;
+    margin: 20px auto; 
+}
+
+/* Class Selector Styling */
+.objective {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.cover_content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+/* Section Styling */
 section {
     margin-bottom: 30px;
 }
@@ -69,18 +108,19 @@ section {
 section h2 {
     font-size: 2em;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--primary-color);
 }
-section h3{
+
+section h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: #333;
+    color: var(--primary-color);
 }
 
 section p {
     font-size: 1.1em;
     margin-bottom: 15px;
-    color: #555;
+    color: var(--text-light);
 }
 
 /* Lists */
@@ -94,17 +134,27 @@ li {
     margin-bottom: 10px;
 }
 
+footer ul {
+    list-style: none;
+}
+
 /* Links */
 a {
-    color: #007BFF;
+    color: var(--secondary-color);
     text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Table styling */
+/* Table Styling */
 table {
     width: 100%;
     margin-top: 20px;
@@ -115,6 +165,8 @@ table {
 table caption {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 th, td {
@@ -124,71 +176,71 @@ th, td {
 }
 
 th {
-    background-color: #f4f4f4;
+    background-color: var(--background-light);
 }
 
-/* Form styling */
+img, audio, video {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+/* Form Styling */
 form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-form input, form textarea, form select, form button {
+form input, form textarea, form select {
+    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin: 10px 0;
     font-size: 1.1em;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
 form button {
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     font-size: 1.2em;
     cursor: pointer;
+    border: none;
 }
 
 form button:hover {
     background-color: #555;
 }
 
-/* Footer styling */
+form .contact_radio_group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+form input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Footer Styling */
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: var(--primary-color);
     color: #fff;
     margin-top: 40px;
-}
-
-footer p {
-    font-size: 1em;
-}
-
-form {
-    background: #fff;
-    padding: 20px;
-    max-width: 500px;
-    margin: 0 auto;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-input[type="submit"] {
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
 }
 
+  /* Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
         padding: 10px;
@@ -221,6 +273,10 @@ input[type="submit"] {
 
     section h3 {
         font-size: 1.3em;
+    }
+
+    main {
+        padding: 20px;
     }
 
     form {

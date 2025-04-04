@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Goals</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
+
     <header>
         <h1>Jontae Hall</h1>
         <p><span>Web Developer</span></p>
         <h2>Career Goals</h2>
         <p>Welcome to my Career Goals page.</p>
     </header>
+
     <nav>
-        <a href="index.html">Resume</a>
-        <a href="Coverletter.html">Cover Letter</a>
+        <ul>
+            <li><a href="index.html">Resume</a></li>
+            <li><a href="coverletter.html">Cover Letter</a></li>
+        </ul>     
     </nav>
+
     <main>
         <img src="images/1698080185889.jpg" alt="Career Image" width="200">
         <audio controls>
@@ -45,10 +52,18 @@
             <label>Message:</label>
             <textarea name="message" rows="4" required></textarea>
             
-            <label>Best Contact Time:</label><br>
-            <input type="radio" name="contact_time" value="am"> a.m.<br>
-            <input type="radio" name="contact_time" value="pm"> p.m.<br>
-            <input type="radio" name="contact_time" value="anytime" checked> Anytime<br>
+            <label>Best Contact Time:</label>
+            <div class="contact_radio_group">
+                <label>
+                    <input type="radio" name="contact_time" value="am"> a.m.
+                </label>
+                <label>
+                    <input type="radio" name="contact_time" value="pm"> p.m.
+                </label>
+                <label>
+                    <input type="radio" name="contact_time" value="anytime" checked> Anytime<br>
+                </label>
+            </div>
             
             <label>Preferred Contact Method:</label>
             <select name="contact_method">
@@ -60,10 +75,11 @@
             <input type="submit" value="Submit">
         </form>
     </main>
+
     <footer>
-        <p><a href="mailto:jontaehall2730@gmail.com">jontaehall2730@gmail.com</a></p>
+                <p><a href="mailto:jontaehall2730@gmail.com">jontaehall2730@gmail.com</a></p>
         <p><a href="tel:313-293-1720">Phone: 313-293-1720</a></p>
-        <p><a href="https://www.linkedin.com/in/jontae-hall/" target="_blank">My Linkedin</a></p>
+        <p><a href="https://www.linkedin.com/in/jontae-hall/" target="_blank">My LinkedIn</a></p>
         <p><a href="https://github.com/JontaeHall" target="_blank">My GitHub</a></p>
     </footer>
 </body>
